@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="/manifest.json">
+  <link href="build.css" rel="stylesheet">
+  <title>Fasting for JESUS</title>
+  <meta name="description" content="Fasting timer and scripture for spiritual fasting.">
+  <meta name="keywords" content="Fasting, Jesus, Scripture, Spiritual, Prayer">
+  <meta name="author" content="Your Name">
+  <meta property="og:title" content="Fasting for JESUS">
+  <meta property="og:description" content="Track your fasting and read scriptures on fasting.">
+  <meta property="og:image" content="path_to_image">
+  <meta property="og:url" content="your_website_url">
+  <meta property="og:type" content="website">
+</head>
+
+<body class="bg-base-200 flex justify-center items-center min-h-screen">
+  <div class="container mx-auto p-4 text-center rounded-lg max-w-md">
+    <h1 class="hidden text-2xl font-bold mb-4">Fasting for JESUS</h1>
+    <img src="images/fasting-for-jesus.webp" alt="Fasting for Jesus" class="mx-auto mb-4 rounded-lg">
+    <div class="flex flex-col items-center space-y-4" id="durationButtons">
+      <input type="number" id="customDays" class="input input-bordered w-24" min="1" placeholder="Days">
+      <button onclick="startCustomFast()" class="btn btn-primary">Start Fast</button>
+      <button onclick="startFast(40)" class="btn btn-secondary">40 Days</button>
+    </div>
+    <button onclick="openModal()" class="btn btn-outline mt-4">Why I am Fasting</button>
+    <div class="timer text-3xl font-mono mt-4" id="timer">00:00:00:00</div>
+    <button id="stop" onclick="stopFast()" class="btn btn-error mt-4 hidden">Stop Fast</button>
+    <h2 class="text-xl font-semibold mt-6">Fasting History</h2>
+    <ul id="historyList" class="list-disc list-inside text-left mt-4"></ul>
+    <button id="clearHistory" onclick="clearHistory()" class="btn btn-warning mt-4">Clear History</button>
+  </div>
+
+  <div id="scriptureModal" class="modal">
+    <div class="modal-box relative">
+      <button class="btn btn-sm btn-circle absolute right-2 top-2" onclick="closeModal()">&times;</button>
+      <h2 class="text-xl font-bold mb-4">Scripture on Fasting</h2>
+      <div id="scriptureText" class="overflow-y-auto max-h-96 text-left">
+        <p><strong>Matthew 6:16-18 (NIV)</strong><br>
+          "When you fast, do not look somber as the hypocrites do, for they disfigure their faces to show others they
+          are fasting. Truly I tell you, they have received their reward in full. But when you fast, put oil on your
+          head and wash your face, so that it will not be obvious to others that you are fasting, but only to your
+          Father, who is unseen; and your Father, who sees what is done in secret, will reward you."</p>
+
+        <p><strong>Isaiah 58:6 (NIV)</strong><br>
+          "Is not this the kind of fasting I have chosen: to loose the chains of injustice and untie the cords of the
+          yoke, to set the oppressed free and break every yoke?"</p>
+
+        <p><strong>Joel 2:12-13 (NIV)</strong><br>
+          "Even now," declares the Lord, "return to me with all your heart, with fasting and weeping and mourning." Rend
+          your heart and not your garments. Return to the Lord your God, for he is gracious and compassionate, slow to
+          anger and abounding in love, and he relents from sending calamity.</p>
+
+        <p><strong>Matthew 4:2 (NIV)</strong><br>
+          After fasting forty days and forty nights, he was hungry.</p>
+
+        <p><strong>Ezra 8:21-23 (NIV)</strong><br>
+          There, by the Ahava Canal, I proclaimed a fast, so that we might humble ourselves before our God and ask him
+          for a safe journey for us and our children, with all our possessions. I was ashamed to ask the king for
+          soldiers and horsemen to protect us from enemies on the road, because we had told the king, "The gracious hand
+          of our God is on everyone who looks to him, but his great anger is against all who forsake him." So we fasted
+          and petitioned our God about this, and he answered our prayer.</p>
+
+        <p><strong>Acts 13:2-3 (NIV)</strong><br>
+          While they were worshiping the Lord and fasting, the Holy Spirit said, "Set apart for me Barnabas and Saul for
+          the work to which I have called them." So after they had fasted and prayed, they placed their hands on them
+          and sent them off.</p>
+
+        <p><strong>Nehemiah 1:4 (NIV)</strong><br>
+          When I heard these things, I sat down and wept. For some days I mourned and fasted and prayed before the God
+          of heaven.</p>
+
+        <p><strong>Daniel 9:3 (NIV)</strong><br>
+          So I turned to the Lord God and pleaded with him in prayer and petition, in fasting, and in sackcloth and
+          ashes.</p>
+
+        <p><strong>Esther 4:16 (NIV)</strong><br>
+          "Go, gather together all the Jews who are in Susa, and fast for me. Do not eat or drink for three days, night
+          or day. I and my attendants will fast as you do. When this is done, I will go to the king, even though it is
+          against the law. And if I perish, I perish."</p>
+
+        <p><strong>Psalm 35:13 (NIV)</strong><br>
+          Yet when they were ill, I put on sackcloth and humbled myself with fasting. When my prayers returned to me
+          unanswered,</p>
+      </div>
+    </div>
+  </div>
+
+  <script defer src="index.js"></script>
+</body>
+
+</html>

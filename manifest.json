@@ -1,0 +1,33 @@
+{
+  "name": "Lee Charles Laing's Songs",
+  "short_name": "Lee's Songs",
+  "description": "A collection of songs written by Lee Charles Laing",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "black",
+  "icons": [
+    {
+      "src": "pwa-64x64.png",
+      "sizes": "64x64",
+      "type": "/images/icons/png"
+    },
+    {
+      "src": "pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "/images/icons/png"
+    },
+    {
+      "src": "pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "/images/icons/png",
+      "purpose": "any"
+    },
+    {
+      "src": "maskable-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "/images/icons/png",
+      "purpose": "maskable"
+    }
+  ]
+}

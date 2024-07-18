@@ -1,0 +1,32 @@
+{
+  "name": "fasting-for-jesus",
+  "version": "1.0.0",
+  "description": "Fasting for JESUS timer App 🙏",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss build index.css -o build.css",
+    "watch:css": "tailwindcss build index.css -o build.css --watch",
+    "pwa": "pwa-assets-generator --preset minimal-2023 images/logo.webp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://"
+  },
+  "keywords": [
+    "god",
+    "fasting",
+    "faith",
+    "jesus"
+  ],
+  "author": "Lee Charles Laing <lcharleslaing@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^10.4.19",
+    "daisyui": "^4.12.10",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.4"
+  },
+  "devDependencies": {
+    "@vite-pwa/assets-generator": "^0.2.4"
+  }
+}
